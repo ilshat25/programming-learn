@@ -32,7 +32,7 @@ class LevelWrapperTestCase(TestCase):
                               10001
                               10101
                               11111"""
-        Level.objects.create(level_map='11111100011010111111', width=5, height=4, x_start=1, y_start=1, num=1)
+        Level.objects.create(level_map='11111100011010111111', width=5, height=4, x_start=1, y_start=1, x_finish=1, y_finish=2, num=1)
 
     def test_level_wrapper_env(self):
         level = LevelWrapper(1)
