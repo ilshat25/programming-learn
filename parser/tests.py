@@ -1,5 +1,5 @@
 from django.test import TestCase
-from parser import Parser
+from .parser import Parser
 from core.models import Level
 from enums.events import Event
 from libs.level_wrapper import LevelWrapper
