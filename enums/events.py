@@ -2,6 +2,7 @@ from enum import Enum
 
 
 class Event(Enum):
-    MOVE = 1
-    ROTATE_LEFT = 2
-    ROTATE_RIGHT = 3
+    DEFAULT = 1
+    MOVE = 2
+    ROTATE_LEFT = 3
+    ROTATE_RIGHT = 4
