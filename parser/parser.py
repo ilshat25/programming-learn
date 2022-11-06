@@ -1,4 +1,5 @@
 from enums.events import Event
+from enums.field_type import FieldType
 
 COMMANDS_DATA = [
     ('left;', Event.ROTATE_LEFT),
@@ -34,5 +35,7 @@ class Parser:
             return Event.DEFAULT
         event = self._events.pop(0)
         if event == Event.MOVE:
-            raise ValueError
-        return self.pop(0)
+            player_env = self._level.get_env(x, y)
+            if direction not in player_env or player_env[direction] != FieldType.EMPTY:
+                raise ValueError
+        return event
