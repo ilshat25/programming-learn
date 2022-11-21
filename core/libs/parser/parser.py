@@ -1,10 +1,10 @@
-from enums.events import Event
-from enums.field_type import FieldType
+from core.libs.enums.events import Event
+from core.libs.enums.field_type import FieldType
 
 COMMANDS_DATA = [
     ('left;', Event.ROTATE_LEFT),
-    ('right;', Event.ROTATE_LEFT),
-    ('move;', Event.ROTATE_LEFT),
+    ('right;', Event.ROTATE_RIGHT),
+    ('move;', Event.MOVE),
 ]
 
 
@@ -22,11 +22,12 @@ class Parser:
             for raw_move, move_type in COMMANDS_DATA:
                 if data.startswith(raw_move):
                     to_del = raw_move
+                    event = move_type
 
             if Event.DEFAULT == event:
                 raise ValueError
             data = data[len(to_del):]
-            event.append(event)
+            events.append(event)
 
         return events
 
