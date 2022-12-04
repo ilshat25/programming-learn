@@ -1,3 +1,8 @@
+html{
+    width: 100vw;
+    height: 100vh;
+}
+
 body {
     background: #d7e8fe;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -9,10 +14,19 @@ body.lock{
     overflow: hidden;
 }
 
+table {
+    margin: 10vh auto;
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+}
+
 .content {
     height: 100vh;
     width: 100vw;
-}
+}   
 
 #left_section{
     float: left;  
