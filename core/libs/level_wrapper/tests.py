@@ -1,28 +1,28 @@
 from django.test import TestCase
 
 from core.models import Level
-from enums.field_type import FieldType
+from core.libs.enums.field_type import FieldType
 from .level_wrapper import LevelWrapper
 
 CASE1 = {
-    'upper': FieldType.BARRIER,
-    'down': FieldType.BARRIER,
-    'left': FieldType.EMPTY,
-    'right': FieldType.EMPTY,
+    (0, 1): FieldType.BARRIER,
+    (0, -1): FieldType.BARRIER,
+    (-1, 0): FieldType.EMPTY,
+    (1, 0): FieldType.EMPTY,
 }
 
 CASE2 = {
-    'upper': FieldType.BARRIER,
-    'down': FieldType.EMPTY,
-    'left': FieldType.BARRIER,
-    'right': FieldType.EMPTY,
+    (0, 1): FieldType.BARRIER,
+    (0, -1): FieldType.EMPTY,
+    (-1, 0): FieldType.BARRIER,
+    (1, 0): FieldType.EMPTY,
 }
 
 CASE3 = {
-    'upper': FieldType.EMPTY,
-    'down': FieldType.BARRIER,
-    'left': FieldType.BARRIER,
-    'right': FieldType.BARRIER,
+    (0, 1): FieldType.EMPTY,
+    (0, -1): FieldType.BARRIER,
+    (-1, 0): FieldType.BARRIER,
+    (1, 0): FieldType.BARRIER,
 }
 
 

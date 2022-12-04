@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <title>CodeGame</title>
+        <meta name="CodeGame" content="CodeGame">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="content">
+            <div id="left_section"> 
+                <div id="start_left_block" class="start_left_block back_rectangle">
+                    <hr class="line_start_left_block">
+                </div>
+                <div id="game_left_block" class="game_left_block back_rectangle">
+                    <div class="code_block">
+                        <textarea type="text" id="code_block" name="code_block"></textarea>
+                    </div>
+                    <hr class="line_game_left_block">
+                    <p class="at_center">
+                        <button type="button" class="btn btn-success btn_size" name="start_button">
+                            Start
+                        </button>
+                    </p>
+                    <div class="error_block">
+                        <textarea type="text" id="error_block" name="error_block" readonly>Error 1: you're stupid</textarea>
+                    </div> 
+                </div>
+            </div>        
+            <div id = "center_section">
+                
+            </div>        
+            <div id = "right_section">
+                <div id="start_right_block" class="start_right_block back_rectangle">
+                    <p class="text_right_section">
+                        Choose level below to start game
+                    </p>
+                    <hr class="line_start_right_block">
+                    <p class="at_center">
+                        <a href="#lvl_1_btn" class="btn_link popup-link">
+                            <button type="button" class="btn btn-success btn_size" name="level_1_btn">
+                                Level 1
+                            </button>
+                        </a>
+                    </p>
+                    <p class="at_center">
+                        <a href="#lvl_2_btn" class="btn_link popup-link">
+                            <button type="button" class="btn btn-success btn_size" name="level_2_btn">
+                                Level 2
+                            </button>
+                        </a>
+                    </p>
+                    <p class="at_center">
+                        <a href="#lvl_3_btn" class="btn_link popup-link">
+                            <button type="button" class="btn btn-success btn_size" name="level_3_btn">
+                                Level 3
+                            </button>
+                        </a>
+                    </p>
+                </div>
+                <div id="game_right_block" class="game_right_block back_rectangle">
+                    <div class="text_right_section">
+                        Goal: Get turtle to the flag
+                    </div>
+                    <p class="at_center">
+                        <a href="#prompt_btn" class="btn_link popup-link">
+                            <button type="button" class="btn btn-success btn_size" name="prompt_btn">
+                                Prompt
+                            </button>
+                        </a>
+                    </p>
+                    <p class="at_center">
+                        <a href="#decision_btn" class="btn_link popup-link">
+                            <button type="button" class="btn btn-success btn_size" name="decision_btn">
+                                Decision
+                            </button>
+                        </a>
+                    </p>
+                    <hr class="line_game_right_block">
+                    <p class="at_center">
+                        <a href="#lvl_1_btn" class="btn_link popup-link">
+                            <button type="button" class="btn btn-success btn_size" name="level_1_btn">
+                                Level 1
+                            </button>
+                        </a>
+                    </p>
+                    <p class="at_center">
+                        <a href="#lvl_2_btn" class="btn_link popup-link">
+                            <button type="button" class="btn btn-success btn_size" name="level_2_btn">
+                                Level 2
+                            </button>
+                        </a>
+                    </p>
+                    <p class="at_center">
+                        <a href="#lvl_3_btn" class="btn_link popup-link">
+                            <button type="button" class="btn btn-success btn_size" name="level_3_btn">
+                                Level 3
+                            </button>
+                        </a>
+                    </p>
+                </div> 
+            </div>
+            <!--Show goal for level 1-->
+            <div id="lvl_1_btn" class="popup">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <a href="#" class="popup__close close-popup">X</a>
+                        <div class="popup__title">Level 1</div>
+                        <div class="popup__text">
+                            Goal: Get turtle to the flag
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Show goal for level 2-->
+            <div id="lvl_2_btn" class="popup">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <a href="#" class="popup__close close-popup">X</a>
+                        <div class="popup__title">Level 2</div>
+                        <div class="popup__text">
+                            Goal: Get turtle to the flag
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Show goal for level 3-->
+            <div id="lvl_3_btn" class="popup">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <a href="#" class="popup__close close-popup">X</a>
+                        <div class="popup__title">Level 3</div>
+                        <div class="popup__text">
+                            Goal: Get turtle to the flag
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <!--Show prompt for this level-->
+            <div id="prompt_btn" class="popup">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <a href="#" class="popup__close close-popup">X</a>
+                        <div class="popup__title">Prompt</div>
+                        <div class="popup__text">
+                            You need to think!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Show decision for this level-->
+            <div id="decision_btn" class="popup">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <a href="#" class="popup__close close-popup">X</a>
+                        <div class="popup__title">Decision</div>
+                        <div class="popup__text">
+                            You need to think!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="popups.js"></script>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    </body>
+</html>

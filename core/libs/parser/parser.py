@@ -1,5 +1,5 @@
-from enums.events import Event
-from enums.field_type import FieldType
+from core.libs.enums.events import Event
+from core.libs.enums.field_type import FieldType
 
 COMMANDS_DATA = [
     ('left;', Event.ROTATE_LEFT),
@@ -27,7 +27,7 @@ class Parser:
             if Event.DEFAULT == event:
                 raise ValueError
             data = data[len(to_del):]
-            event.append(event)
+            events.append(event)
 
         return events
 
