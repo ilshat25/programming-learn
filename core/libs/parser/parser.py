@@ -19,7 +19,7 @@ class Parser:
         while data:
             to_del = ''
             event = Event.DEFAULT
-
+            data = data.strip()
             for raw_move, move_type in COMMANDS_DATA:
                 if data.startswith(raw_move):
                     to_del = raw_move
