@@ -41,3 +41,6 @@ class LevelWrapper:
 
     def get_num(self):
         return self._level.num
+
+    def get_level(self):
+        return self._parsed_level
