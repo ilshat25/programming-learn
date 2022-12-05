@@ -4,8 +4,8 @@ from core.libs.enums.field_type import FieldType
 COMMANDS_DATA = [
     ('left;', Event.ROTATE_LEFT),
     ('right;', Event.ROTATE_RIGHT),
-    ('move;', Event.MOVE),
     ('move_while_empty;', Event.MOVE_WHILE_EMPTY),
+    ('move;', Event.MOVE),
 ]
 
 
@@ -35,12 +35,15 @@ class Parser:
     def get_event(self, x, y, direction):
         if not self._events:
             return Event.DEFAULT
+        print(x, y, direction)
         if self._events[0] == Event.MOVE_WHILE_EMPTY:
             player_env = self._level.get_env(x, y)
             if direction not in player_env:
                 raise ValueError
             if player_env[direction] != FieldType.EMPTY:
                 self._events.pop(0)
+                if not self._events:
+                    return Event.DEFAULT
             else:
                 return Event.MOVE
         event = self._events.pop(0)

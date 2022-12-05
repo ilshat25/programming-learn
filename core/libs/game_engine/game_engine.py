@@ -21,5 +21,6 @@ class GameEngine:
                 return ExecuteResult(positions, self._level)
             if event == Event.DEFAULT:
                 break
+            print(event)
             positions.append(geo.get_new_position(event))
         return ExecuteResult(positions, self._level)
