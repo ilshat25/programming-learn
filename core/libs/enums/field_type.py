@@ -1,6 +1,6 @@
 from enum import Enum
 
 
-class FieldType(Enum):
-    EMPTY = 1
-    BARRIER = 2
+class FieldType(str, Enum):
+    EMPTY = 'EMPTY'
+    BARRIER = 'BARRIER'
