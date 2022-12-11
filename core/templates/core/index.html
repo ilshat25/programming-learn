@@ -27,7 +27,7 @@
                         </button>
                     </p>
                     <div class="error_block">
-                        <textarea type="text" id="error_block" name="error_block" readonly>Error 1: you're stupid</textarea>
+                        <textarea type="text" id="error_block" name="error_block" readonly></textarea>
                     </div> 
                 </div>
             </div>        
@@ -71,7 +71,7 @@
                     <p class="at_center">
                         <a href="#prompt_btn" class="btn_link popup-link">
                             <button type="button" class="btn btn-success btn_size" name="prompt_btn">
-                                Prompt
+                                Rules
                             </button>
                         </a>
                     </p>
@@ -142,14 +142,19 @@
                     </div>
                 </div>
             </div>            
-            <!--Show prompt for this level-->
+            <!--Show rules for this level-->
             <div id="prompt_btn" class="popup">
                 <div class="popup__body">
                     <div class="popup__content">
                         <a href="#" class="popup__close close-popup">X</a>
-                        <div class="popup__title">Prompt</div>
+                        <div class="popup__title">Rules</div>
                         <div class="popup__text">
-                            You need to think!
+                            Commands are entered one at a time, separated by ";"<br>
+                            Input commands:<br>
+                            <b>move</b> - move the turtle forward 1 block;<br>
+                            <b>move_while_empty</b> - moving the turtle forward until the moment of the wall in front;<br>
+                            <b>left</b> - turning the turtle to the left without moving;<br>
+                            <b>right</b> - turning the turtle to the right without moving.
                         </div>
                     </div>
                 </div>
